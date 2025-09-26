@@ -1,0 +1,16 @@
+# Project Requirements
+
+## Objective
+Design and implement a relational database management system for [describe what your database is for - e.g., "a small business inventory system"].
+
+## Functional Requirements
+- Store customer information and order history
+- Track product inventory and sales
+- Generate sales reports and analytics
+- Maintain employee records and departments
+
+## Technical Requirements
+- MySQL 8.0+ compatibility
+- Normalized database design (3NF)
+- Proper indexing for performance
+- Comprehensive query library
