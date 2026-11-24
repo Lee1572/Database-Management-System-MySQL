@@ -1,0 +1,7 @@
+# Local database exports and credentials
+*.sql.gz
+.env
+.env.*
+!.env.example
+.DS_Store
+Thumbs.db
