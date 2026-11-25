@@ -1,1 +1,159 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 680" role="img" aria-label="Guitar Shop Entity Relationship Diagram">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1120 690" role="img" aria-labelledby="erd-title erd-desc">
+  <title id="erd-title">Guitar Shop — Entity Relationship Overview</title>
+  <desc id="erd-desc">Entity relationship diagram showing categories, products, customers, addresses, orders, order_items, and administrators tables and their foreign key relationships.</desc>
+
+  <defs>
+    <style>
+      .bg { fill: #0b1220; }
+      .title { fill: #f5f7fb; font: 700 20px system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; }
+      .caption { fill: #9aa8ba; font: 400 13px system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; }
+      .card-body { fill: #111c2e; stroke: #4b5d75; stroke-width: 1.5; }
+      .card-header { fill: #203047; }
+      .card-divider { stroke: #364963; stroke-width: 1; }
+      .table-name { fill: #f5f7fb; font: 700 16px system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; }
+      .col-text { fill: #dce5f2; font: 400 13.5px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+      .key-badge { fill: #e5bd88; font: 700 13.5px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+      .rel-line { fill: none; stroke: #63a4f4; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+
+    
+    <clipPath id="header-clip-220">
+      <rect x="0" y="0" width="220" height="42" rx="10" ry="10" />
+    </clipPath>
+    <clipPath id="header-clip-240">
+      <rect x="0" y="0" width="240" height="42" rx="10" ry="10" />
+    </clipPath>
+  </defs>
+
+  
+  <rect class="bg" x="0" y="0" width="1120" height="690" rx="8" />
+
+  
+  <text class="title" x="36" y="48">Guitar Shop — Entity Relationship Overview</text>
+
+  
+  
+  <path class="rel-line" d="M 256 135 L 316 135" />
+
+  
+  <path class="rel-line" d="M 436 272 L 436 296 L 904 296 L 904 195 L 880 195" />
+
+  
+  <path class="rel-line" d="M 156 364 L 156 296 L 436 296" />
+
+  
+  <path class="rel-line" d="M 276 420 L 316 420" />
+
+  
+  <path class="rel-line" d="M 556 420 L 640 420" />
+
+  
+  <path class="rel-line" d="M 760 364 L 760 256" />
+
+  
+
+  
+  <g transform="translate(36, 94)">
+    <rect class="card-body" x="0" y="0" width="220" height="106" rx="10" />
+    <g clip-path="url(#header-clip-220)">
+      <rect class="card-header" x="0" y="0" width="220" height="42" />
+    </g>
+    <line class="card-divider" x1="0" y1="42" x2="220" y2="42" />
+    <text class="table-name" x="16" y="27">categories</text>
+    <text class="col-text" x="16" y="66"><tspan class="key-badge">PK</tspan> category_id</text>
+    <text class="col-text" x="16" y="90"><tspan class="key-badge">UQ</tspan> category_name</text>
+  </g>
+
+  
+  <g transform="translate(316, 94)">
+    <rect class="card-body" x="0" y="0" width="240" height="198" rx="10" />
+    <g clip-path="url(#header-clip-240)">
+      <rect class="card-header" x="0" y="0" width="240" height="42" />
+    </g>
+    <line class="card-divider" x1="0" y1="42" x2="240" y2="42" />
+    <text class="table-name" x="16" y="27">products</text>
+    <text class="col-text" x="16" y="66"><tspan class="key-badge">PK</tspan> product_id</text>
+    <text class="col-text" x="16" y="90"><tspan class="key-badge">FK</tspan> category_id</text>
+    <text class="col-text" x="16" y="114"><tspan class="key-badge">UQ</tspan> product_code</text>
+    <text class="col-text" x="16" y="138">product_name</text>
+    <text class="col-text" x="16" y="162">list_price</text>
+    <text class="col-text" x="16" y="186">discount_percent</text>
+  </g>
+
+  
+  <g transform="translate(640, 94)">
+    <rect class="card-body" x="0" y="0" width="240" height="174" rx="10" />
+    <g clip-path="url(#header-clip-240)">
+      <rect class="card-header" x="0" y="0" width="240" height="42" />
+    </g>
+    <line class="card-divider" x1="0" y1="42" x2="240" y2="42" />
+    <text class="table-name" x="16" y="27">order_items</text>
+    <text class="col-text" x="16" y="66"><tspan class="key-badge">PK</tspan> item_id</text>
+    <text class="col-text" x="16" y="90"><tspan class="key-badge">FK</tspan> order_id</text>
+    <text class="col-text" x="16" y="114"><tspan class="key-badge">FK</tspan> product_id</text>
+    <text class="col-text" x="16" y="138">item_price, quantity</text>
+    <text class="col-text" x="16" y="162">discount_amount</text>
+  </g>
+
+  
+
+  
+  <g transform="translate(36, 364)">
+    <rect class="card-body" x="0" y="0" width="240" height="198" rx="10" />
+    <g clip-path="url(#header-clip-240)">
+      <rect class="card-header" x="0" y="0" width="240" height="42" />
+    </g>
+    <line class="card-divider" x1="0" y1="42" x2="240" y2="42" />
+    <text class="table-name" x="16" y="27">customers</text>
+    <text class="col-text" x="16" y="66"><tspan class="key-badge">PK</tspan> customer_id</text>
+    <text class="col-text" x="16" y="90"><tspan class="key-badge">UQ</tspan> email_address</text>
+    <text class="col-text" x="16" y="114">first_name</text>
+    <text class="col-text" x="16" y="138">last_name</text>
+    <text class="col-text" x="16" y="162"><tspan class="key-badge">FK</tspan> shipping_address_id</text>
+    <text class="col-text" x="16" y="186"><tspan class="key-badge">FK</tspan> billing_address_id</text>
+  </g>
+
+  
+  <g transform="translate(316, 364)">
+    <rect class="card-body" x="0" y="0" width="240" height="150" rx="10" />
+    <g clip-path="url(#header-clip-240)">
+      <rect class="card-header" x="0" y="0" width="240" height="42" />
+    </g>
+    <line class="card-divider" x1="0" y1="42" x2="240" y2="42" />
+    <text class="table-name" x="16" y="27">addresses</text>
+    <text class="col-text" x="16" y="66"><tspan class="key-badge">PK</tspan> address_id</text>
+    <text class="col-text" x="16" y="90"><tspan class="key-badge">FK</tspan> customer_id</text>
+    <text class="col-text" x="16" y="114">line1, city, state</text>
+    <text class="col-text" x="16" y="138">zip_code, phone</text>
+  </g>
+
+  
+  <g transform="translate(640, 364)">
+    <rect class="card-body" x="0" y="0" width="240" height="174" rx="10" />
+    <g clip-path="url(#header-clip-240)">
+      <rect class="card-header" x="0" y="0" width="240" height="42" />
+    </g>
+    <line class="card-divider" x1="0" y1="42" x2="240" y2="42" />
+    <text class="table-name" x="16" y="27">orders</text>
+    <text class="col-text" x="16" y="66"><tspan class="key-badge">PK</tspan> order_id</text>
+    <text class="col-text" x="16" y="90"><tspan class="key-badge">FK</tspan> customer_id</text>
+    <text class="col-text" x="16" y="114"><tspan class="key-badge">FK</tspan> ship_address_id</text>
+    <text class="col-text" x="16" y="138"><tspan class="key-badge">FK</tspan> billing_address_id</text>
+    <text class="col-text" x="16" y="162">order_date, ship_date</text>
+  </g>
+
+  
+  <g transform="translate(916, 364)">
+    <rect class="card-body" x="0" y="0" width="168" height="126" rx="10" />
+    <rect class="card-header" x="0" y="0" width="168" height="42" rx="10" />
+    <rect class="card-header" x="0" y="24" width="168" height="18" />
+    <line class="card-divider" x1="0" y1="42" x2="168" y2="42" />
+    <text class="table-name" x="16" y="27">administrators</text>
+    <text class="col-text" x="16" y="66"><tspan class="key-badge">PK</tspan> admin_id</text>
+    <text class="col-text" x="16" y="90">email_address</text>
+    <text class="col-text" x="16" y="114">first_name, last_name</text>
+  </g>
+
+  
+  <text class="caption" x="36" y="646">PK = primary key · FK = foreign key · UQ = unique constraint. Relationships are enforced by the SQL setup scripts.</text>
+</svg>
